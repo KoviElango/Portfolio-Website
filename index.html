@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kovi Elango - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main class="home" data-scroll-container>
+        <nav class="home__nav">
+            <div class="home__nav__left">
+                <div class="nav__name" nav-anim>
+                    <span>Kovi <br> Elango</span>
+                </div>
+                <div class="nav__folio hide-mobile" nav-anim>
+                    <span>
+                        Android Developer <br>
+                        Folio / 2021 — 2024
+                    </span>
+                </div>
+            </div>
+            <div class="home__nav__right">
+                <div class="nav__folio hide-desktop" nav-anim>
+                    Project Coordinator <br>
+                    Folio / 2021 — 2024
+                </div>
+                <div class="nav__availability" nav-anim></div>
+                <button class="nav__button c-button contact-scroll" nav-anim>
+                    <span class="c-link">
+                        <span class="c-link__inner">
+                            <span>contact</span>
+                            <span class="c-link__animated">contact</span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="home__hero">
+            <div class="hero__title">
+                <h1 class="mobile">
+                    ANDROID <br>
+                    —— DEVELOPER <br>
+                    DESIGNER
+                </h1>
+                <h1 class="hero__title__top overflow desktop">
+                    <!-- Hero content -->
+                </h1>
+            </div>
+            <div class="wrapper">
+                <h3>Hi there! I am</h3>
+                <h1>Kovi Elango</h1>
+                <span>I love&nbsp;</span>
+                <span class="text"></span>
+                <span class="cursor">|</span>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/koovendhan-elango-0b160989/" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/KoviElango" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="mailto:kovendhanelango@gmail.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                <div id="scroll-down" class="arrow"></div>
+            </div>
+        </section>
+
+        <section class="home__projects">
+            <h2>Projects</h2>
+            <ul class="projects-list">
+                <li class="project-item">
+                    <a href="https://github.com/KoviElango/Thaavarm" target="_blank">
+                        <h3>Thavaram</h3>
+                        <p>Android application which uses libraries to identify plant species.</p>
+                    </a>
+                </li>
+                <!-- Add other project items here -->
+            </ul>
+        </section>
+
+        <section class="home__content">
+            <h2>Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline-left">
+                    <div class="timeline-item">
+                        <h3>Tacit Corporation – Toronto, CA</h3>
+                        <h4>Project Coordinator</h4>
+                        <span>January 2021 – April 2024</span>
+                    </div>
+                    <!-- Add other timeline items here -->
+                </div>
+                <div class="timeline-line"></div>
+                <div class="timeline-right">
+                    <div class="timeline-item">
+                        <h3>McMaster University – Hamilton, ON</h3>
+                        <h4>Master of Engineering Design</h4>
+                        <span>2019</span>
+                    </div>
+                    <!-- Add other timeline items here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="home__contact">
+            <!-- Contact content -->
+        </section>
+
+        <footer class="home__footer">
+            <p>"If you don't take risks, you can't create a future!" — Monkey D. Luffy </p>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

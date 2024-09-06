@@ -1,0 +1,232 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #111;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Layout */
+.home {
+    padding: 2.4rem 0;
+}
+
+.home__nav,
+.home__hero,
+.home__projects,
+.home__content,
+.home__contact,
+.home__footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+/* Navigation */
+.home__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6.4rem;
+}
+
+.nav__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav__folio {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.nav__button {
+    background: none;
+    border: 2px solid #777;
+    color: #aaa;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav__button:hover {
+    background: #777;
+    color: #111;
+}
+
+/* Hero section */
+.home__hero {
+    margin-bottom: 9.6rem;
+}
+
+.hero__title {
+    font-size: 5rem;
+    line-height: 0.9;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.wrapper h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.wrapper h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.social {
+    margin-top: 2rem;
+}
+
+.social a {
+    color: #aaa;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #fff;
+}
+
+.arrow {
+    margin-top: 2rem;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Projects section */
+.home__projects {
+    margin-bottom: 6rem;
+}
+
+.projects-list {
+    list-style-type: none;
+}
+
+.project-item {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateX(10px);
+}
+
+.project-item a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.project-item h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Timeline section */
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.timeline-left, .timeline-right {
+    width: 45%;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #777;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+.home__footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-style: italic;
+}
+
+/* Animations */
+.cursor {
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .home__nav,
+    .home__hero,
+    .home__projects,
+    .home__content,
+    .home__contact,
+    .home__footer {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .timeline-container {
+        flex-direction: column;
+    }
+
+    .timeline-left, .timeline-right {
+        width: 100%;
+    }
+
+    .timeline-line {
+        left: 0;
+    }
+}
