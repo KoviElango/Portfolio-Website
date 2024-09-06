@@ -185,8 +185,27 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     margin-bottom: 2rem;
     padding-left: 1rem;
+    transition: all 0.3s ease;
 }
 
+.timeline-item h3,
+.timeline-item h4,
+.timeline-item span {
+    transition: color 0.3s ease;
+}
+
+/* Remove the text-shadow properties and update the color changes */
+.timeline-item:hover h3 {
+    color: #b96fff; /* Purple color for the title */
+}
+
+.timeline-item:hover h4 {
+    color: #e2a7ff; /* Darker purple for the subtitle */
+}
+
+.timeline-item:hover span {
+    color: #ea98ff; /* Lighter purple for the date */
+}
 
 .timeline-item h3 {
     font-size: 1.5rem;

@@ -86,17 +86,66 @@ document.addEventListener('DOMContentLoaded', () => {
     // Typing effect for "I love..." text
     const textElement = document.querySelector('.text');
     if (textElement) {
-        const text = "coding, designing, and building cool stuff!";
-        let index = 0;
+        const message = {
+            message: [
+                'Making Mobile Apps;', 
+                'Robotics and Autonomous Vehicles;', 
+                'Astronomy and Anime;', 
+                'Designing;',
+                'AI and Machine Learning;',
+                'கொத்து பரோட்டா;'
+            ],
+            counterS: 0,
+            counterL: 0,
+            deleteS: false,
 
-        function typeText() {
-            if (index < text.length) {
-                textElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeText, 100);
+            init: function() {
+                this.cacheElem();
+                this.type();
+            },
+
+            cacheElem: function() {
+                this.element = textElement;
+            },
+
+            type: function() {
+                const currentText = this.message[this.counterS].substring(0, this.counterL);
+                this.element.textContent = currentText;
+
+                if (!this.deleteS && this.counterL < this.message[this.counterS].length) {
+                    this.counterL++;
+                    setTimeout(() => this.type(), 100);
+                } else if (!this.deleteS && this.counterL === this.message[this.counterS].length) {
+                    setTimeout(() => {
+                        this.deleteS = true;
+                        this.type();
+                    }, 1000);
+                } else if (this.deleteS && this.counterL > 0) {
+                    this.counterL--;
+                    setTimeout(() => this.type(), 50);
+                } else if (this.deleteS && this.counterL === 0) {
+                    this.deleteS = false;
+                    this.counterS = (this.counterS + 1) % this.message.length;
+                    setTimeout(() => this.type(), 200);
+                }
             }
-        }
+        };
 
-        typeText();
+        message.init();
     }
+
+    // Timeline item hover effects
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.querySelector('h3').style.color = '#8a2be2';
+            item.querySelector('h4').style.color = '#9932cc';
+            item.querySelector('span').style.color = '#ba55d3';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.querySelector('h3').style.color = '';
+            item.querySelector('h4').style.color = '';
+            item.querySelector('span').style.color = '';
+        });
+    });
 });
