@@ -72,10 +72,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero__title {
-    font-size: 5rem;
+    font-size: 10rem;
     line-height: 0.9;
     color: #777;
     margin-bottom: 2rem;
+}
+
+.hero__title-left,
+.hero__title-center,
+.hero__title-right {
+    display: inline-block;
+}
+
+.hero__title-left,
+.hero__title-right {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.hero__title-center {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 3rem;
+    }
 }
 
 .wrapper {
@@ -154,35 +175,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Timeline section */
-.timeline-container {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-}
-
-.timeline-left, .timeline-right {
-    width: 45%;
-}
-
-.timeline-line {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #777;
+.timeline-list {
+    list-style-type: none;
+    padding-left: 2rem;
+    border-left: 2px solid #777;
 }
 
 .timeline-item {
+    position: relative;
     margin-bottom: 2rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
+    padding-left: 1rem;
 }
 
-.timeline-item.visible {
-    opacity: 1;
-    transform: translateY(0);
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: #999;
+}
+
+.timeline-item span {
+    font-size: 1rem;
+    color: #777;
 }
 
 /* Footer */

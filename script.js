@@ -10,15 +10,17 @@ gsap.to(".big-text", {
     }
 });
 
-// Add more animations here
 
-// Glow effect for text
 document.querySelectorAll('.glow-text').forEach(element => {
     element.addEventListener('mouseover', () => {
-        element.style.textShadow = '0 0 10px rgba(255, 255, 255, 0.8)';
+        element.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff';
+        element.style.color = '#ffffff';
+        element.style.transition = 'all 0.3s ease';
     });
     element.addEventListener('mouseout', () => {
         element.style.textShadow = 'none';
+        element.style.color = '';
+        element.style.transition = 'all 0.3s ease';
     });
 });
 
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.querySelectorAll('.glow-char').forEach(char => {
             char.addEventListener('mouseover', () => {
-                char.style.textShadow = '0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00';
+                char.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff';
             });
             char.addEventListener('mouseout', () => {
                 char.style.textShadow = 'none';
@@ -44,26 +46,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth scroll for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
     // Hero title animation
-    gsap.to(".hero__title", {
-        x: "10vw",
+    gsap.to(".hero__title-left, .hero__title-right", {
+        x: "-100vw",
         scrollTrigger: {
             trigger: ".hero__title",
-            start: "top center",
-            end: "bottom center",
-            scrub: true
+            start: "top 10%",
+            end: "bottom top",
+            scrub: 1,
         }
     });
+
+    gsap.to(".hero__title-center", {
+        x: "100vw",
+        scrollTrigger: {
+            trigger: ".hero__title",
+            start: "top 20%",
+            end: "bottom top",
+            scrub: 1,
+        }
+    });
+    
 
     // Project item animations
     document.querySelectorAll('.project-item').forEach((item, index) => {
@@ -74,22 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: {
                 trigger: item,
                 start: "top bottom",
-                end: "top center",
+                end: "top 80%", // Changed to complete animation when item reaches top 20% of viewport
                 scrub: true
-            }
-        });
-    });
-
-    // Timeline item animations
-    gsap.utils.toArray('.timeline-item').forEach(item => {
-        gsap.from(item, {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            scrollTrigger: {
-                trigger: item,
-                start: "top 80%",
-                toggleActions: "play none none reverse"
             }
         });
     });
@@ -109,16 +98,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         typeText();
-    }
-
-    // Scroll down arrow animation
-    const scrollArrow = document.querySelector('.arrow');
-    if (scrollArrow) {
-        scrollArrow.addEventListener('click', () => {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
-        });
     }
 });
