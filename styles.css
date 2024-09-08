@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
 }
 
+
 /* Layout */
 .home {
     padding: 2.4rem 0;
@@ -91,6 +92,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero__title-center {
     font-family: 'Bebas Neue', sans-serif;
+}
+
+.hero__title__top.overflow.desktop {
+    font-family: 'Source Code Pro', monospace;
 }
 
 @media (max-width: 768px) {
@@ -204,16 +209,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-item:hover span {
-    color: #ea98ff; /* Lighter purple for the date */
+    color: #00ff4c; /* Lighter purple for the date */
 }
 
 .timeline-item h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .timeline-item h4 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.3rem;
     color: #999;
 }
@@ -228,6 +233,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding: 2rem 0;
     font-style: italic;
+    font-size: small;
 }
 
 /* Animations */

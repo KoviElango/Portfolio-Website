@@ -137,9 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Timeline item hover effects
     document.querySelectorAll('.timeline-item').forEach(item => {
         item.addEventListener('mouseenter', () => {
-            item.querySelector('h3').style.color = '#8a2be2';
-            item.querySelector('h4').style.color = '#9932cc';
-            item.querySelector('span').style.color = '#ba55d3';
+            item.querySelector('h3').style.color = '#32CD32';
+            item.querySelector('h4').style.color = '#32CD32';
+            item.querySelector('span').style.color = '#0BDA51';
         });
 
         item.addEventListener('mouseleave', () => {
