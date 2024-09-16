@@ -72,6 +72,13 @@ h2, h3, h4, h5, h6 {
     margin-bottom: 9.6rem;
 }
 
+.home__hero p {
+    font-family: "SUSE", sans-serif;
+    font-size: 1.2rem;
+    color: #aaa;
+    line-height: 1.5;
+}
+
 .hero__title {
     font-size: 10rem;
     line-height: 0.9;
@@ -83,6 +90,10 @@ h2, h3, h4, h5, h6 {
 .hero__title-center,
 .hero__title-right {
     display: inline-block;
+}
+
+.hero__title-center{
+    color: #ffa500;
 }
 
 .hero__title-left,
@@ -209,7 +220,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .timeline-item:hover span {
-    color: #00ff4c; /* Lighter purple for the date */
+    color: #ffffff; /* Lighter purple for the date */
 }
 
 .timeline-item h3 {
