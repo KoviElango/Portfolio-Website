@@ -28,15 +28,15 @@ body.light-mode {
     --bg-primary: #f8f9fa;
     --bg-secondary: #e9ecef;
     --text-primary: #333;
-    --text-secondary: #666;
+    --text-secondary: #363636;
     --text-accent: #ff6b35;
-    --border-color: #666;
+    --border-color: #000000;
     --nav-bg: rgba(248, 249, 250, 0.95);
     --project-bg: #e9ecef;
-    --timeline-border: #666;
+    --timeline-border: #313131;
     --button-bg: transparent;
     --button-text: #333;
-    --button-hover-bg: #666;
+    --button-hover-bg: #2c2c2c;
     --button-hover-text: #f8f9fa;
 }
 
