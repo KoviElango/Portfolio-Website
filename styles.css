@@ -21,6 +21,9 @@
     --button-text: #aaa;
     --button-hover-bg: #777;
     --button-hover-text: #111;
+    --timeline-hover-title: #ffa500;
+    --timeline-hover-subtitle: #aaa;
+    --timeline-hover-date: #ffa500;
 }
 
 /* Light theme */
@@ -38,6 +41,9 @@ body.light-mode {
     --button-text: #333;
     --button-hover-bg: #2c2c2c;
     --button-hover-text: #f8f9fa;
+    --timeline-hover-title: #ff6b35;
+    --timeline-hover-subtitle: #363636;
+    --timeline-hover-date: #ff6b35;
 }
 
 body, html {
@@ -271,18 +277,7 @@ h2, h3, h4, h5, h6 {
     transition: color 0.3s ease;
 }
 
-/* Remove the text-shadow properties and update the color changes */
-.timeline-item:hover h3 {
-    color: #b96fff; /* Purple color for the title */
-}
 
-.timeline-item:hover h4 {
-    color: #e2a7ff; /* Darker purple for the subtitle */
-}
-
-.timeline-item:hover span {
-    color: #ffffff; /* Lighter purple for the date */
-}
 
 .timeline-item h3 {
     font-size: 2rem;

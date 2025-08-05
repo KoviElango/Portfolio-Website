@@ -137,15 +137,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Timeline item hover effects
     document.querySelectorAll('.timeline-item').forEach(item => {
         item.addEventListener('mouseenter', () => {
-            item.querySelector('h3').style.color = '#e3e3e3';
-            item.querySelector('h4').style.color = '#e3e3e3';
-            item.querySelector('span').style.color = '#ffa500';
+            const h3 = item.querySelector('h3');
+            const h4 = item.querySelector('h4');
+            const span = item.querySelector('span');
+            
+            // Use CSS variables for theme-aware colors
+            h3.style.color = 'var(--timeline-hover-title)';
+            h4.style.color = 'var(--timeline-hover-subtitle)';
+            span.style.color = 'var(--timeline-hover-date)';
         });
 
         item.addEventListener('mouseleave', () => {
-            item.querySelector('h3').style.color = '';
-            item.querySelector('h4').style.color = '';
-            item.querySelector('span').style.color = '';
+            const h3 = item.querySelector('h3');
+            const h4 = item.querySelector('h4');
+            const span = item.querySelector('span');
+            
+            // Reset to default colors
+            h3.style.color = '';
+            h4.style.color = '';
+            span.style.color = '';
         });
     });
 
