@@ -177,7 +177,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .project-item:hover {
-    transform: translateX(10px);
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .project-item a {
@@ -284,4 +284,51 @@ h2, h3, h4, h5, h6 {
     .timeline-line {
         left: 0;
     }
+}
+
+/* Skills section */
+.home__skills {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.skills-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skills-list li {
+    background: #222;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.skills-list li:hover {
+    background: #ffa500; /* Highlight on hover */
+}
+
+/* Call to Action button */
+.hero__cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    background: #ffa500;
+    color: #111;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e68a00; /* Darker shade on hover */
 }
