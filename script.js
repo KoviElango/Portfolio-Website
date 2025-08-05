@@ -154,19 +154,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const body = document.body;
         const button = document.getElementById('theme-toggle-button');
 
-        // Toggle classes
-        body.classList.toggle('dark-mode');
+        // Toggle light mode class
         body.classList.toggle('light-mode');
 
         // Update button text based on current theme
-        if (body.classList.contains('dark-mode')) {
-            button.textContent = 'Switch to Light Mode';
+        if (body.classList.contains('light-mode')) {
+            button.textContent = '🌙 Dark Mode';
         } else {
-            button.textContent = 'Switch to Dark Mode';
+            button.textContent = '☀️ Light Mode';
         }
 
         // Save the current theme in local storage
-        localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
     }
 
     // Load the saved theme on page load
@@ -176,12 +175,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (savedTheme === 'light') {
         body.classList.add('light-mode');
-        button.textContent = 'Switch to Dark Mode';
+        button.textContent = '🌙 Dark Mode';
     } else {
-        body.classList.add('dark-mode');
-        button.textContent = 'Switch to Light Mode';
+        // Default to dark mode
+        button.textContent = '☀️ Light Mode';
     }
 
     // Add event listener to the toggle button
     button.addEventListener('click', toggleTheme);
+
+    // Smooth scroll to projects section
+    const exploreWorkLink = document.querySelector('a[href="#home__projects"]');
+    if (exploreWorkLink) {
+        exploreWorkLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const projectsSection = document.querySelector('.home__projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+
+    // Book a meeting button functionality
+    const bookMeetingButton = document.getElementById('book-meeting-button');
+    if (bookMeetingButton) {
+        bookMeetingButton.addEventListener('click', function() {
+            window.open('https://calendly.com/kovendhanelango/15min', '_blank');
+        });
+    }
 });

@@ -15,31 +15,18 @@
 <body>
     <main class="home" data-scroll-container>
         <nav class="home__nav">
-            <div class="theme-toggle">
-                <button id="theme-toggle-button">Toggle Light/Dark Mode</button>
-            </div>
             <div class="home__nav__left">
-                <div class="nav__name" nav-anim>
-                    <span>Koovendhan Elango</span>
-                </div>
-                <div class="nav__folio hide-mobile" nav-anim>
-                    <span>
-                        Experience map and personal projects <br>
-                    </span>
-                </div>
+                <a href="#home__projects" class="nav__name" nav-anim>
+                    <span>Explore My Work</span>
+                </a>
             </div>
             <div class="home__nav__right">
                 <div class="nav__folio hide-desktop" nav-anim>
-                    Book a meeting <br>
+                    If you want to know more about me <br>
                 </div>
                 <div class="nav__availability" nav-anim></div>
-                <button class="nav__button c-button contact-scroll" nav-anim>
-                    <span class="c-link">
-                        <span class="c-link__inner">
-                            <a href="https://calendly.com/kovendhanelango/15min" class="c-link__animated">contact</a>
-                        </span>
-                    </span>
-                </button>
+                <button class="nav__button" id="book-meeting-button" nav-anim>Book a meeting</button>
+                <button id="theme-toggle-button" class="nav__button" nav-anim>☀️ Light Mode</button>
             </div>
         </nav>
 
